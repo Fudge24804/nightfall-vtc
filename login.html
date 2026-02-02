@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login | Nightfall Logistics</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container" style="padding:60px 0;">
+    <div class="card">
+      <h1>Nightfall Logistics</h1>
+      <p class="muted">Sign up or log in to access the member dashboard.</p>
+
+      <div class="grid2">
+        <div class="card card--glass">
+          <h2>Create account</h2>
+          <form id="signupForm" class="form">
+            <div class="field"><label>Email</label><input name="email" type="email" required /></div>
+            <div class="field"><label>Password</label><input name="password" type="password" minlength="8" required /></div>
+            <div class="field"><label>Username (TruckersMP name)</label><input name="username" placeholder="Fudge25901" required /></div>
+            <button class="btn" type="submit">Sign up</button>
+            <div id="signupMsg" class="tiny muted"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>Log in</h2>
+          <form id="loginForm" class="form">
+            <div class="field"><label>Email</label><input name="email" type="email" required /></div>
+            <div class="field"><label>Password</label><input name="password" type="password" required /></div>
+            <button class="btn" type="submit">Log in</button>
+            <div id="loginMsg" class="tiny muted"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { signUp, signIn } from "/js/auth.js";
+
+    const sForm = document.getElementById("signupForm");
+    const lForm = document.getElementById("loginForm");
+    const sMsg = document.getElementById("signupMsg");
+    const lMsg = document.getElementById("loginMsg");
+
+    sForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      sMsg.textContent = "Creating account...";
+      try {
+        const fd = new FormData(sForm);
+        await signUp(fd.get("email"), fd.get("password"), fd.get("username"));
+        sMsg.textContent = "Signed up! Now log in.";
+      } catch (err) {
+        sMsg.textContent = err.message || "Sign up failed.";
+      }
+    });
+
+    lForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      lMsg.textContent = "Logging in...";
+      try {
+        const fd = new FormData(lForm);
+        await signIn(fd.get("email"), fd.get("password"));
+        location.href = "/dashboard.html";
+      } catch (err) {
+        lMsg.textContent = err.message || "Login failed.";
+      }
+    });
+  </script>
+</body>
+</html>

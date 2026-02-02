@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin | Nightfall Logistics</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container" style="padding:50px 0;">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;">
+        <div>
+          <h1 style="margin:0;">Admin Panel</h1>
+          <div id="adminMe" class="muted"></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="btn btn--ghost" href="/dashboard.html">Back to Dashboard</a>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top:18px;">
+        <div class="card card--glass">
+          <h2>Members</h2>
+          <div class="muted tiny">Ban/unban members. Owner can change roles.</div>
+          <div id="membersWrap" style="margin-top:10px;"></div>
+        </div>
+
+        <div class="card">
+          <h2>Applications</h2>
+          <div class="muted tiny">Review and set status (pending/accepted/rejected).</div>
+          <div id="appsWrap" style="margin-top:10px;"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <h2>Site Content (Owner)</h2>
+        <div class="muted tiny">Edit team list + Discord link + basic VTC info as JSON.</div>
+        <textarea id="contentJson" rows="10" style="width:100%; margin-top:10px;"></textarea>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
+          <select id="contentKey">
+            <option value="team">team</option>
+            <option value="discord">discord</option>
+            <option value="vtc">vtc</option>
+          </select>
+          <button id="saveContent" class="btn">Save Content</button>
+          <div id="contentMsg" class="tiny muted"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

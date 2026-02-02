@@ -1,0 +1,2 @@
+export const SUPABASE_URL = "https://cemussckhbjmeenvrawk.supabase.co";
+export const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNlbXVzc2NraGJqbWVlbnZyYXdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk5NzkzMDIsImV4cCI6MjA4NTU1NTMwMn0.BE02zpw0t_Rz4hagyTFlJ1iTvwNdtzB2uTalPjLzcTo";

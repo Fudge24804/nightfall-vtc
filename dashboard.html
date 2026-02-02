@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard | Nightfall Logistics</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container" style="padding:50px 0;">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;">
+        <div>
+          <h1 style="margin:0;">Member Dashboard</h1>
+          <div id="me" class="muted"></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="btn btn--ghost" href="/team.html">Meet the Team</a>
+          <a class="btn btn--ghost" href="/apply.html">Apply</a>
+          <a id="adminLink" class="btn" href="/admin.html" style="display:none;">Admin Panel</a>
+          <button id="logoutBtn" class="btn btn--ghost">Log out</button>
+        </div>
+      </div>
+
+      <div class="sectionTitle" style="margin-top:18px;">
+        <h2>Current Members</h2>
+        <p class="muted">Live roster pulled from the database.</p>
+      </div>
+
+      <div class="card card--glass">
+        <table id="membersTable" style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid rgba(255,255,255,.08);">Name</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid rgba(255,255,255,.08);">Role</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid rgba(255,255,255,.08);">Joined</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="membersMsg" class="tiny muted" style="margin-top:10px;"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>
