@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nightfall Logistics | TruckersMP VTC</title>
+  <meta name="description" content="Nightfall Logistics is a professional TruckersMP VTC." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <div class="brand__logo"><span>LOGO</span></div>
+        <div>
+          <div class="brand__name" id="vtcName">Nightfall Logistics</div>
+          <div class="brand__tag">Tag: <strong id="vtcTag">[NITE]</strong></div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#convoys">Convoys</a>
+        <a href="#requirements">Requirements</a>
+        <a href="/team.html">Team</a>
+        <a class="btn btn--small" href="/apply.html">Apply</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <h1 id="vtcSlogan">Driving the roads while the world sleeps.</h1>
+          <p class="muted">
+            A professional TruckersMP VTC focused on realistic driving, calm comms, and clean standards —
+            without the cringe, drama, or pressure.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="/apply.html">Apply</a>
+            <a class="btn btn--ghost" id="discordBtn" href="#" target="_blank" rel="noopener">Join Discord</a>
+            <a class="btn btn--ghost" id="dashBtn" href="/dashboard.html" style="display:none;">Dashboard</a>
+            <a class="btn btn--ghost" id="loginBtn" href="/login.html">Login</a>
+          </div>
+
+          <div class="note">
+            Unsure about requirements? Apply anyway — staff will review fairly.
+          </div>
+        </div>
+
+        <div class="bannerCard">
+          <div class="pill">BANNER PLACEHOLDER</div>
+          <h2 style="margin:10px 0 6px;">Nightfall Branding</h2>
+          <p class="muted">
+            Add your logo + banners later in <code>/assets</code>. We can make Discord banners, recruitment posters,
+            and a clean livery style guide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container grid2">
+        <div class="card">
+          <div class="sectionTitle">
+            <h2>About</h2>
+            <p class="muted">Realism-leaning, friendly, professional.</p>
+          </div>
+          <p>
+            Nightfall Logistics is built for people who want the VTC experience without it feeling like a job.
+            If you drive clean and act normal, you’ll fit in.
+          </p>
+          <ul class="muted">
+            <li>Optional convoys (when we schedule them)</li>
+            <li>Clear roles (Owner/Admin/Mod/Driver)</li>
+            <li>Member dashboard and roster</li>
+            <li>Applications reviewed by staff</li>
+          </ul>
+        </div>
+
+        <div class="card card--glass">
+          <div class="sectionTitle">
+            <h2>Quick Links</h2>
+            <p class="muted">Everything in one place.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn--ghost" href="/team.html">Meet the Team</a>
+            <a class="btn btn--ghost" href="/apply.html">Apply</a>
+            <a class="btn btn--ghost" href="/dashboard.html">Dashboard</a>
+          </div>
+
+          <div class="note">
+            Discord: <code id="discordText">https://discord.gg/YOURINVITE</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="convoys" class="section">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Convoys</h2>
+          <p class="muted">Simple explanation — no knowledge needed.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>What is it?</h3>
+            <p class="muted">A group drive. We meet, line up, follow a route, arrive together.</p>
+          </div>
+          <div class="card">
+            <h3>How it runs</h3>
+            <p class="muted">A lead truck sets pace. Staff keep it smooth. No chaos, no racing.</p>
+          </div>
+          <div class="card">
+            <h3>Do I have to?</h3>
+            <p class="muted">Nope. Optional. Solo driving is fine — convoys are for the vibe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements" class="section">
+      <div class="container grid2">
+        <div class="card">
+          <div class="sectionTitle">
+            <h2>Requirements</h2>
+            <p class="muted">Basic quality gate.</p>
+          </div>
+          <ul class="muted">
+            <li>TruckersMP account age: <strong>1+ month</strong></li>
+            <li>TruckersMP hours: <strong>30+ hours</strong></li>
+            <li>Age: <strong>16+</strong></li>
+          </ul>
+          <div class="note">
+            If you’re close or unsure, apply anyway. We’ll tell you what you’re missing.
+          </div>
+        </div>
+
+        <div class="card card--glass">
+          <div class="sectionTitle">
+            <h2>Staff Structure</h2>
+            <p class="muted">Professional roles.</p>
+          </div>
+          <p class="muted">
+            Owner (you) manages roles and site content. Admin/Mod handle moderation and applications.
+            Drivers are the roster. Bans/roles are enforced server-side.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="tiny muted">© <span id="year"></span> <span id="footerName">Nightfall Logistics</span></div>
+        <div class="tiny muted">Member system powered by Supabase</div>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="/js/index.js"></script>
+</body>
+</html>
